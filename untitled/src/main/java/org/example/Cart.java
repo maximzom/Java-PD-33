@@ -4,24 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private List<Product> products; // Список товарів у кошику
+    private List<Product> products;
 
-    // Конструктор класу
     public Cart() {
         this.products = new ArrayList<>();
     }
 
-    // Метод для додавання товару до кошика
     public void addProduct(Product product) {
         products.add(product);
     }
 
-    // Метод для видалення товару з кошика
     public void removeProduct(Product product) {
         products.remove(product);
     }
 
-    // Метод для отримання загальної вартості товарів у кошику
     public double getTotalPrice() {
         double total = 0;
         for (Product product : products) {
@@ -30,7 +26,6 @@ public class Cart {
         return total;
     }
 
-    // Метод для виведення інформації про всі товари у кошику
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("Кошик містить:\n");
@@ -42,10 +37,10 @@ public class Cart {
     }
 
     public List<Product> getProducts() {
-        return new ArrayList<>(products); // Повертаємо копію списку, щоб запобігти змінам ззовні
+        return new ArrayList<>(products);
     }
 
     public void clear() {
-        products.clear(); // Очищення списку товарів у кошику
+        products.clear();
     }
 }
