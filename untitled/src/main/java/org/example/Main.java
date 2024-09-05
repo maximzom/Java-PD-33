@@ -6,18 +6,16 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Створення категорій
         Category electronics = new Category(1, "Електроніка");
         Category smartphones = new Category(2, "Смартфони");
         Category accessories = new Category(3, "Аксесуари");
 
-        // Створення об'єктів класу Product з вказівкою категорії
         Product product1 = new Product(1, "Ноутбук", 19999.99, "Високопродуктивний ноутбук для роботи та ігор", electronics);
         Product product2 = new Product(2, "Смартфон", 12999.50, "Смартфон з великим екраном", smartphones);
         Product product3 = new Product(3, "Навушники", 2499.00, "Бездротові навушники з шумозаглушенням", accessories);
 
         Cart cart = new Cart();
-        OrderHistory orderHistory = new OrderHistory(); // Історія замовлень
+        OrderHistory orderHistory = new OrderHistory();
 
         while (true) {
             System.out.println("\nВиберіть опцію:");
